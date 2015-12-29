@@ -10,14 +10,19 @@
 
 
 
-
 ![Spartakiade](images/logo_spartakiade.png)
 
 ***
 
 ### Frank Pommerening
 
-![Frank Pommerening](images/fp.jpg)
+- Softwarearchitekt
+- Senior - Softwareentwickler
+- Consultant
+
+frank@pommerening-online.de
+
+<img src="images/fp.jpg" width=200>
 
 
 
