@@ -1,4 +1,4 @@
-# Spartakiade2016
+# Spartakiade 2016
 
 <p align="center"><img src="images/logo_spartakiade.png" width=100/></p>
 
