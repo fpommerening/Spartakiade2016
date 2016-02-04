@@ -12,4 +12,19 @@ mit Frank Pommerening
 
 Hinweis: Ich überarbeite gerade diese Seite und werde Details zum Workshop in den nächsten Tagen veröffentlichen.
 
+## Inhalt
+1. [Zielgruppe](#zielgruppe)
+2. [Inhalt](#inhalt)
+3. [Teilnehmer-Voraussetzungen](#voraussetzungen)
+
+
+<a name="zielgruppe"></a>
+## 1. Zielgruppe
+
+<a name="themen"></a>
+## 2. Inhalt
+
+<a name="voraussetzungen"></a>
+## 3. Teilnehmer-Voraussetzungen
+
 *In diesem GitHub-Repository werden die Initial-Projekte für die Übungen sowie die Präsenation veröffentlich.* 
