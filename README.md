@@ -8,8 +8,7 @@ Twitter: http://twitter.com/spartakiade_org
 Datum: 19. bis 20. März 2016
 
 # Workshop: Micro Services mit .NET und RabbitMQ
-mit Frank Pommerening <a href="https://twitter.com/fpommerening" class="twitter-follow-button" data-show-count="false" data-show-screen-name="false">Follow @fpommerening</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+mit Frank Pommerening <a href="https://twitter.com/fpommerening"><img src="TwitterLogo.png" alt="Follow @fpommerening" width=30/></a> 
 
 Hinweis: Ich überarbeite gerade diese Seite und werde Details zum Workshop in den nächsten Tagen veröffentlichen.
 
