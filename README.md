@@ -10,8 +10,6 @@ Datum: 19. bis 20. März 2016
 # Workshop: Microservices mit .NET und RabbitMQ
 mit Frank Pommerening <a href="https://twitter.com/fpommerening"><img src="images/TwitterLogo.png" alt="Follow @fpommerening" width=30/></a> 
 
-Hinweis: Ich überarbeite diese Seite gerade und werde Details zum Workshop in den nächsten Tagen veröffentlichen.
-
 ## Inhalt
 1. [Zielgruppe](#zielgruppe)
 2. [Inhalt](#inhalt)
