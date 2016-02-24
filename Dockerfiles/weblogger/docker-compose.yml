@@ -1,0 +1,33 @@
+MyRabbitMQ:
+  image: rabbitmq:3-management
+  ports:
+    - 5672:7672
+    - 15672:15672
+
+weblogger1:
+  image: fpommerening/spartakiade2016:logging-web
+  links:
+    - MyRabbitMQ:MyRabbitMQ
+  hostname: logger1
+
+weblogger2:
+  image: fpommerening/spartakiade2016:logging-web
+  links:
+    - MyRabbitMQ:MyRabbitMQ
+  hostname: logger2
+
+weblogger3:
+  image: fpommerening/spartakiade2016:logging-web
+  links:
+    - MyRabbitMQ:MyRabbitMQ
+  hostname: logger3
+
+loadbalancer:
+  image: fpommerening/spartakiade2016:loadbalancer
+  links:
+    - weblogger1:weblogger1
+    - weblogger2:weblogger2
+    - weblogger3:weblogger3
+  ports:
+    - 80:80
+
