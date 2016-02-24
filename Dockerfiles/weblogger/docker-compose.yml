@@ -30,4 +30,13 @@ loadbalancer:
     - weblogger3:weblogger3
   ports:
     - 80:80
-
+#logconsole:
+#  image: fpommerening/spartakiade2016:logging-console
+#  links: 
+#    - MyRabbitMQ:MyRabbitMQ
+#  hostname: logconsole
+loggingcaller:
+  image: fpommerening/spartakiade2016:logging-caller
+  links: 
+    - loadbalancer:loadbalancer
+  hostname: loggingcaller
