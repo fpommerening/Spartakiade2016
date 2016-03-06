@@ -35,6 +35,7 @@ loadbalancer:
 #  links: 
 #    - MyRabbitMQ:MyRabbitMQ
 #  hostname: logconsole
+
 loggingcaller:
   image: fpommerening/spartakiade2016:logging-caller
   links: 
