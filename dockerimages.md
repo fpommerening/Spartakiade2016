@@ -6,11 +6,11 @@ Um Wartezeiten vermeiden bzw. die Internetanbindung zu schonen ladet die Images 
  
 
 Dazu verbindet ihr euch auf einen Docker-Host. 
-Dort gebt ihr  den Befehl ein: <b>docker pull</b> <i>Imagenamen</i> 
+Dort gebt ihr  den Befehl ein: <b>docker pull</b> <i>Imagenamen</i> <br/>
 Beispiel: docker pull fpommerening/sparatakiade2016:project-data
 
 
-<b>Die folgnde Liste ist der erste Entwurf</b>
+<b>Die folgende Liste ist der erste Entwurf. Der finale Version wird etwa eine Woche vorher veröffentlicht. </b>
 
 - fpommerening/spartakiade2016:project-build
 - fpommerening/spartakiade2016:project-data
