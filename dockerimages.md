@@ -17,6 +17,8 @@ Beispiel: docker pull fpommerening/sparatakiade2016:project-data
 - fpommerening/spartakiade2016:project-share
 - fpommerening/spartakiade2016:loadbalancer
 - fpommerening/spartakiade2016:process-data
+- microsoft/aspnet:1.0.0-rc1-update1
+- mono
 - maxexcloo/phppgadmin
 - rabbitmq:3-management
 - tutum/mongodb
