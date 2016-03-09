@@ -47,6 +47,6 @@ Hinweis: Docker wird für die Bereitstellung der Infrastuktur, z.B. einer Datenb
 [x] Virtuelle Docker-Maschine (<a href="https://docs.docker.com/engine/installation/windows/">Anleitung Docker auf Windows</a>)
 
 Zur Vermeidung von Wartezeiten und Entlastung der Internetleitung vor Ort sollten die Teilnehmer vorher die notwendigen Docker-Images herunterladen.
-Eine entsprechende Liste wird etwa eine Woche vorher veröffentlicht.
+Eine entsprechende Liste könnt ihr <a href="dockerimages.md" > hier </a> einsehen.
 
 *In diesem GitHub-Repository werden die Initial-Projekte für die Übungen sowie die Präsenation veröffentlich.* 
