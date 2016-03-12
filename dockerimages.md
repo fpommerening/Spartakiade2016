@@ -5,8 +5,10 @@ Um Wartezeiten vermeiden bzw. die Internetanbindung zu schonen ladet die Images 
 
 
 Dazu verbindet ihr euch auf einen Docker-Host.<br />
-Dort gebt ihr  den Befehl ein: <b><a href="https://docs.docker.com/engine/reference/commandline/pull/" target="_blank">docker pull</a></b>
- <i>Imagenamen</i> <br/>
+Dort gebt ihr  den Befehl ein: <b>docker pull</b> <i>Imagename</i>
+(<a href="https://docs.docker.com/engine/reference/commandline/pull/" target="_blank">Infos</a>)
+
+ <br/>
 Beispiel: docker pull fpommerening/sparatakiade2016:project-data
 
 
