@@ -1,0 +1,68 @@
+MyRabbitMQ:
+  image: rabbitmq:3-management
+  ports:
+    - 5672:7672
+    - 15672:15672
+
+webbroker:
+  image: fpommerening/spartakiade2016:process-webbroker
+  links:
+    - MyRabbitMQ:MyRabbitMQ
+  hostname: processServer
+
+authorization:
+  image: fpommerening/spartakiade2016:process-processes
+  links:
+    - MyRabbitMQ:MyRabbitMQ
+  command: dnx run authorization
+
+messagerouter:
+  image: fpommerening/spartakiade2016:process-processes
+  links:
+    - MyRabbitMQ:MyRabbitMQ
+  command: dnx run messagerouter
+
+invoicrouter:
+  image: fpommerening/spartakiade2016:process-processes
+  links:
+    - MyRabbitMQ:MyRabbitMQ
+  command: dnx run invoicrouter
+
+customerrouter:
+  image: fpommerening/spartakiade2016:process-processes
+  links:
+    - MyRabbitMQ:MyRabbitMQ
+  command: dnx run customerrouter
+
+bill:
+  image: fpommerening/spartakiade2016:process-processes
+  links:
+    - MyRabbitMQ:MyRabbitMQ
+  command: dnx run bill
+
+reversal:
+ image: fpommerening/spartakiade2016:process-processes
+ links:
+    - MyRabbitMQ:MyRabbitMQ
+ command: dnx run reversal
+
+registration:
+ image: fpommerening/spartakiade2016:process-processes
+ links:
+    - MyRabbitMQ:MyRabbitMQ
+ command: dnx run registration
+
+marketpartner:
+  image: fpommerening/spartakiade2016:process-marketpartner
+  links:
+    - webbroker:processServer
+  ports:
+    - 12088:12088
+  hostname: marketpartner
+
+messagedispatcher:
+  image: fpommerening/spartakiade2016:process-processes
+  links:
+    - MyRabbitMQ:MyRabbitMQ
+    - marketpartner:marketpartner
+  command: dnx run messagedispatcher
