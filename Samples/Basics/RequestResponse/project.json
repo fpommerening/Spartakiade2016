@@ -1,0 +1,24 @@
+{
+  "version": "1.0.0-*",
+  "description": "FP.Spartakiade2016.RequestResponse Console Application",
+  "authors": [ "frank" ],
+  "tags": [ "" ],
+  "projectUrl": "",
+  "licenseUrl": "",
+
+  "compilationOptions": {
+    "emitEntryPoint": true
+  },
+
+  "dependencies": {
+    "EasyNetQ": "0.55.0.425"
+  },
+
+  "commands": {
+    "FP.Spartakiade2016.RequestResponse": "RequestResponse"
+  },
+
+  "frameworks": {
+    "dnx451": { }
+  }
+}

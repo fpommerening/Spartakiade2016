@@ -1,0 +1,25 @@
+{
+  "version": "1.0.0-*",
+  "description": "FP.Spartakiade2016.PublishSubscribe Console Application",
+  "authors": [ "frank" ],
+  "tags": [ "" ],
+  "projectUrl": "",
+  "licenseUrl": "",
+
+  "compilationOptions": {
+    "emitEntryPoint": true
+  },
+
+  "dependencies": {
+    "EasyNetQ": "0.55.0.425"
+  },
+
+  "commands": {
+    "FP.Spartakiade2016.PublishSubscribe": "PublishSubscribe"
+  },
+
+  "frameworks": {
+    "dnx451": { 
+    }
+  }
+}

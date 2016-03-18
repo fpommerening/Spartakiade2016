@@ -1,0 +1,27 @@
+{
+  "version": "1.0.0-*",
+  "description": "FP.Spartakiade2016.Connecting Console Application",
+  "authors": [ "frank" ],
+  "tags": [ "" ],
+  "projectUrl": "",
+  "licenseUrl": "",
+
+  "compilationOptions": {
+    "emitEntryPoint": true
+  },
+
+  "dependencies": {
+    "EasyNetQ": "0.55.0.425"
+  },
+
+  "commands": {
+    "FP.Spartakiade2016.Connecting": "Connecting"
+  },
+
+  "frameworks": {
+    "dnx451": {
+
+
+    }
+  }
+}
