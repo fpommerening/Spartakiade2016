@@ -564,8 +564,15 @@ $ ./logging-console.sh
                         </pre>
                         <pre>
                             <code data-trim contenteditable>
-                                $ ./weblogger.sh up
+                               $ ./weblogger.sh run loggingcaller
 $ ./weblogger.sh rm
+                            </code>
+                        </pre>
+                         <pre>
+                            <code data-trim contenteditable>
+$ docker run --it --rm --name logconsole 
+--link weblogger_MyRabbitMQ_1:MyRabbitMQ 
+fpommerening/spartakiade2016:logging-console
                             </code>
                         </pre>
                     
