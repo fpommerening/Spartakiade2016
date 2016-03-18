@@ -1,0 +1,33 @@
+{
+  "version": "1.0.0-*",
+  "description": "FP.Spartakiade2016.ProcessChain.Processes Console Application",
+  "authors": [ "frank" ],
+  "tags": [ "" ],
+  "projectUrl": "",
+  "licenseUrl": "",
+
+  "compilationOptions": {
+    "emitEntryPoint": true
+  },
+
+  "dependencies": {
+    "Contracts": "1.0.0-*",
+    "Data": "1.0.0-*",
+    "EasyNetQ": "0.55.0.425",
+    "Newtonsoft.Json.Schema": "2.0.2"
+  },
+
+  "commands": {
+    "FP.Spartakiade2016.ProcessChain.Processes": "Processes messagedispatcher"
+  },
+
+  "frameworks": {
+    "dnx451": {
+      "dependencies": {
+      },
+      "frameworkAssemblies": {
+        "System.Net.Http": "4.0.0.0"
+      }
+    }
+  }
+}

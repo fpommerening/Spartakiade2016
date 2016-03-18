@@ -1,0 +1,21 @@
+﻿@inherits Nancy.ViewEngines.Razor.NancyRazorViewBase<FP.Spartakiade2016.ProcessChain.MarketPartner.Models.Confirm>
+
+<html>
+<body>
+    @Model.DisplayText
+
+    <br/>
+    <br/>
+
+    @Model.ErrorText
+
+<br/>
+<br/>
+<h1>Funktionen</h1>
+<a href="/bill/">Rechnung</a>&nbsp;&nbsp;&nbsp;
+<a href="/reversal/">Stornorechnung</a>&nbsp;&nbsp;&nbsp;
+<a href="/registration/">Kundenregistrierung</a>
+
+</body>
+
+</html>

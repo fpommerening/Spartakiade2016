@@ -1,0 +1,125 @@
+{
+  "locked": false,
+  "version": 2,
+  "targets": {
+    "DNX,Version=v4.5.1": {
+      "Contacts/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.5.1"
+      },
+      "EasyNetQ/0.55.0.425": {
+        "type": "package",
+        "dependencies": {
+          "RabbitMQ.Client": "[3.6.0, ]"
+        },
+        "compile": {
+          "lib/net45/EasyNetQ.dll": {}
+        },
+        "runtime": {
+          "lib/net45/EasyNetQ.dll": {}
+        }
+      },
+      "RabbitMQ.Client/3.6.0": {
+        "type": "package",
+        "compile": {
+          "lib/net45/RabbitMQ.Client.dll": {}
+        },
+        "runtime": {
+          "lib/net45/RabbitMQ.Client.dll": {}
+        }
+      }
+    },
+    "DNX,Version=v4.5.1/win7-x86": {
+      "Contacts/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.5.1"
+      },
+      "EasyNetQ/0.55.0.425": {
+        "type": "package",
+        "dependencies": {
+          "RabbitMQ.Client": "[3.6.0, ]"
+        },
+        "compile": {
+          "lib/net45/EasyNetQ.dll": {}
+        },
+        "runtime": {
+          "lib/net45/EasyNetQ.dll": {}
+        }
+      },
+      "RabbitMQ.Client/3.6.0": {
+        "type": "package",
+        "compile": {
+          "lib/net45/RabbitMQ.Client.dll": {}
+        },
+        "runtime": {
+          "lib/net45/RabbitMQ.Client.dll": {}
+        }
+      }
+    },
+    "DNX,Version=v4.5.1/win7-x64": {
+      "Contacts/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.5.1"
+      },
+      "EasyNetQ/0.55.0.425": {
+        "type": "package",
+        "dependencies": {
+          "RabbitMQ.Client": "[3.6.0, ]"
+        },
+        "compile": {
+          "lib/net45/EasyNetQ.dll": {}
+        },
+        "runtime": {
+          "lib/net45/EasyNetQ.dll": {}
+        }
+      },
+      "RabbitMQ.Client/3.6.0": {
+        "type": "package",
+        "compile": {
+          "lib/net45/RabbitMQ.Client.dll": {}
+        },
+        "runtime": {
+          "lib/net45/RabbitMQ.Client.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Contacts/1.0.0": {
+      "type": "project",
+      "path": "../Contacts/project.json"
+    },
+    "EasyNetQ/0.55.0.425": {
+      "type": "package",
+      "sha512": "Q0Iu9gUqV6kvUZLJuAXHeghs36BDmdEQLP3JeOJ+l/JNP9sH4loSbFFeWdyddIfI/1URuw5d/cXfU/VIdD56Kg==",
+      "files": [
+        "EasyNetQ.0.55.0.425.nupkg",
+        "EasyNetQ.0.55.0.425.nupkg.sha512",
+        "EasyNetQ.nuspec",
+        "lib/net45/EasyNetQ.dll",
+        "lib/net45/EasyNetQ.xml"
+      ]
+    },
+    "RabbitMQ.Client/3.6.0": {
+      "type": "package",
+      "sha512": "SERgu0RH68f4MkoefaiOHP8BqRfPCAIYMUSe07VT7PXTKWX+yykDAZfiV7J7pF+6rW7/XxYR1LjsCTJG8rod/g==",
+      "files": [
+        "lib/net45/RabbitMQ.Client.dll",
+        "lib/net45/RabbitMQ.Client.xml",
+        "lib/netcore45/RabbitMQ.Client.dll",
+        "lib/netcore45/RabbitMQ.Client.xml",
+        "RabbitMQ.Client.3.6.0.nupkg",
+        "RabbitMQ.Client.3.6.0.nupkg.sha512",
+        "RabbitMQ.Client.nuspec",
+        "RabbitMQ.Client.nuspec~"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    "": [
+      "Contacts >= 1.0.0-*",
+      "EasyNetQ >= 0.55.0.425"
+    ],
+    "DNX,Version=v4.5.1": []
+  }
+}

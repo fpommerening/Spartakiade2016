@@ -1,0 +1,27 @@
+﻿{
+  "version": "1.0.0-*",
+  "description": "FP.Spartakiade2016.Logging.Caller Console Application",
+  "authors": [ "frank.pommerening" ],
+  "tags": [ "" ],
+  "projectUrl": "",
+  "licenseUrl": "",
+
+  "compilationOptions": {
+    "emitEntryPoint": true
+  },
+
+  "dependencies": {
+  },
+
+  "commands": {
+    "FP.Spartakiade2016.Logging.Caller": "Caller"
+  },
+
+  "frameworks": {
+    "dnx451": {
+      "dependencies": {
+        "System.Net.Http": "4.0.1-beta-23516"
+      }
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "version": "1.0.0-*",
+  "description": "FP.Spartakiade2016.Logging.Console Console Application",
+  "authors": [ "frank.pommerening" ],
+  "tags": [ "" ],
+  "projectUrl": "",
+  "licenseUrl": "",
+
+  "compilationOptions": {
+    "emitEntryPoint": true
+  },
+
+  "dependencies": {
+    "Contacts": "1.0.0-*",
+    "EasyNetQ": "0.55.0.425"
+  },
+
+  "commands": {
+    "FP.Spartakiade2016.Logging.Console": "Console"
+  },
+
+  "frameworks": {
+    "dnx451": { }
+    
+  }
+}

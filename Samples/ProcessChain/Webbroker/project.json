@@ -1,0 +1,27 @@
+{
+  "version": "1.0.0-*",
+  "compilationOptions": {
+    "emitEntryPoint": true
+  },
+
+  "dependencies": {
+    "Microsoft.AspNet.Server.Kestrel": "1.0.0-rc1-final",
+    "Microsoft.AspNet.Owin": "1.0.0-rc1-final",
+    "Nancy": "1.4.3",
+    "Contracts": "1.0.0-*",
+    "EasyNetQ": "0.55.0.425",
+    "Nancy.Authentication.Basic": "1.4.1",
+    "Newtonsoft.Json.Schema": "2.0.2"
+  },
+
+  "commands": {
+    "web": "Microsoft.AspNet.Server.Kestrel --server.urls http://0.0.0.0:9090"
+  },
+
+  "frameworks": {
+    "dnx451": {
+      "dependencies": {
+      }
+    }
+  }
+}

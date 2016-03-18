@@ -1,0 +1,74 @@
+﻿@inherits Nancy.ViewEngines.Razor.NancyRazorViewBase<FP.Spartakiade2016.ProcessChain.MarketPartner.Models.Registration>
+<html>
+<head>
+</head>
+<body>
+    <h1>Kundenregistrierung</h1>
+    <form action="~/registration" method="POST">
+        <table>
+            <tr>
+                <td>Benutzername</td>
+                <td><input type="text" id="UserName"  value="@Model.UserName" style="width: 150px"/></td>
+                <td>Password</td>
+                <td><input type="text" id="Password" value="@Model.Password" style="width: 150px"/></td>
+            </tr>
+        </table>
+        <br/>
+        <table>
+            <tr>
+                <td>Name</td>
+                <td><input type="text" id="Name" name="Name" value="@Model.Name" style="width: 300px"/></td>
+                <td>Vorname</td>
+                <td><input type="text" id="FirstName" name="FirstName"  value="@Model.FirstName" style="width: 300px"/></td>
+            </tr>
+            <tr>
+                <td>Titel</td>
+                <td><input type="text" id="Title" name="Title" value="@Model.Title" style="width: 150px"/></td>
+                <td>Geburtsdatum</td>
+                <td><input type="date" id="Birthday" name="Birthday" value="@Model.Birthday" style="width: 150px"/></td>
+            </tr>
+            <tr>
+                <td>E-Mail</td>
+                <td colspan="3"><input type="email" id="Email" name="Email"  value="@Model.Email" style="width: 450px"/></td>
+            </tr>
+        </table>
+        <br />
+        Lieferadresse
+        <br />
+        <table>
+            <tr>
+                <td>Stra&szlig;e</td>
+                <td><input type="text" id="DeliveryAddressStreet" name="DeliveryAddressStreet" value="@Model.DeliveryAddressStreet" style="width: 300px"/></td>
+                <td>Hausnummer</td>
+                <td><input type="text" id="DeliveryAddressNumber"  name="DeliveryAddressNumber" value="@Model.DeliveryAddressNumber" style="width: 75px"/></td>
+            </tr>
+            <tr>
+                <td>Stadt</td>
+                <td><input type="text" id="DeliveryAddressCity" name="DeliveryAddressCity" value="@Model.DeliveryAddressCity" style="width: 300px"/></td>
+                <td>PLZ</td>
+                <td><input type="text" id="DeliveryAddressZipCode" name="DeliveryAddressZipCode" value="@Model.DeliveryAddressZipCode" style="width: 75px"/></td>
+            </tr>
+        </table>
+        <br/>
+        Rechnungsadresse
+        <br />
+        <table>
+            <tr>
+                <td>Stra&szlig;e</td>
+                <td><input type="text" id="BillingAddressStreet" value="@Model.BillingAddressStreet" style="width: 300px"/></td>
+                <td>Hausnummer</td>
+                <td><input type="text" id="BillingAddressNumber" value="@Model.BillingAddressNumber" style="width: 75px"/></td>
+            </tr>
+            <tr>
+                <td>Stadt</td>
+                <td><input type="text" id="BillingAddressCity" value="@Model.BillingAddressCity" style="width: 300px"/></td>
+                <td>PLZ</td>
+                <td><input type="text" id="BillingAddressZipCode" value="@Model.BillingAddressZipCode" style="width: 75px"/></td>
+            </tr>
+        </table>
+
+        <input type="submit"/>
+    </form>
+</body>
+
+</html>

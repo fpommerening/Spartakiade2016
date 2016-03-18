@@ -1,0 +1,42 @@
+﻿@inherits Nancy.ViewEngines.Razor.NancyRazorViewBase<FP.Spartakiade2016.ProcessChain.MarketPartner.Models.Reversal>
+<html>
+<head>
+</head>
+<body>
+<h1>Rechnungsstorno</h1>
+<form action="~/reversal" method="post">
+    <table>
+        <tr>
+            <td>Benutzername</td>
+            <td><input type="text" id="UserName" value="@Model.UserName" style="width: 150px"/></td>
+            <td>Password</td>
+            <td><input type="text" id="Password" value="@Model.Password" style="width: 150px" /></td>
+        </tr>
+    </table>
+    <br/>
+    <table>
+        <tr>
+            <td>Dokumentennummer</td>
+            <td><input type="text" id="Number" name="Number" value="@Model.Number" style="width: 500px"/></td>
+        </tr>
+        <tr>
+            <td>Dokumentendatum</td>
+            <td><input type="date" id="DocumentDate" name="DocumentDate" value="@Model.DocumentDate" style="width: 500px"/></td>
+        </tr>
+        <tr>
+            <td>Referenzrechnung</td>
+            <td><input type="text" id="ReferenceBillNumber" name="ReferenceBillNumber" value="@Model.ReferenceBillNumber" style="width: 500px"/></td>
+        </tr>
+        <tr>
+            <td>Referenzdatum</td>
+            <td><input type="date" id="ReferenceDate" name="ReferenceDate" value="@Model.ReferenceDate" style="width: 500px"/></td>
+        </tr>
+        <tr>
+            <td colspan="2" style="text-align: right"><input type="submit" value="Absenden"/></td>
+        </tr>
+    </table>
+</form>
+</body>
+
+</html>
+

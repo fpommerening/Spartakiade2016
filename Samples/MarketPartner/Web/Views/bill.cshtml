@@ -1,0 +1,70 @@
+﻿@inherits Nancy.ViewEngines.Razor.NancyRazorViewBase<FP.Spartakiade2016.ProcessChain.MarketPartner.Models.Bill>
+
+<html>
+<head>
+</head>
+<body>
+    <h1>Rechnung</h1>
+    <form action="~/bill" method="post">
+        <table>
+            <tr>
+                <td>Benutzername</td>
+                <td><input type="text" id="UserName" name="UserName" value="@Model.UserName" style="width: 150px" /></td>
+            </tr>
+            <tr>
+                <td>Password</td>
+                <td><input type="text" id="Password" name="Password" value="@Model.Password" style="width: 150px" /></td>
+            </tr>
+        </table>
+        <br/>
+
+        <table>
+            <tr>
+                <td>Pos</td>
+                <td><input type="text" name="PosNumber" id="PosNumber" value="@Model.PosNumber" style="width: 50px"/></td>
+                <td>Von</td>
+                <td><input type="text" name="PosValidFrom" id="PosValidFrom" value="@Model.PosValidFrom" style="width: 75px"/></td>
+                <td>bis</td>
+                <td><input type="text" name="PosValidTo" id="PosValidTo" value="@Model.PosValidTo" style="width: 75px"/></td>
+            </tr>
+            <tr>
+                <td>Netto</td>
+                <td><input type="text" name="PosNetAmount" id="PosNetAmount" value="@Model.PosNetAmount" style="width: 75px"/>&euro;</td>
+                <td>Steuern</td>
+                <td><input type="text" name="PosTaxAmmount" id="PosTaxAmmount" value="@Model.PosTaxAmmount" style="width: 75px"/>&euro;</td>
+                <td>Brutto</td>
+                <td><input type="text" name="PosGrossAmmount" id="PosGrossAmmount" value="@Model.PosGrossAmmount" style="width: 75px"/>&euro;</td>
+            </tr>
+            <tr>
+                <td>Artikel</td>
+                <td colspan="5"><input type="text" name="PosArticle" id="PosArticle" value="@Model.PosArticle" style="width: 250px"/></td>
+            </tr>
+            <tr>
+                <td>Bemerkung</td>
+                <td colspan="5"><input type="text" name="PosComment" id="PosComment" value="@Model.PosComment" style="width: 500px" /></td>
+            </tr>
+        </table>
+        <br />
+        Adresse
+        <br />
+        <table>
+            <tr>
+                <td>Stra&szlig;e</td>
+                <td><input type="text" id="AddressStreet" name="AddressStreet" value="@Model.AddressStreet" style="width: 300px"/></td>
+                <td>Hausnummer</td>
+                <td><input type="text" id="AddressNumber" name="AddressNumber" value="@Model.AddressNumber" style="width: 75px"/></td>
+            </tr>
+            <tr>
+                <td>Stadt</td>
+                <td><input type="text" id="AddressCity" name="AddressCity" value="@Model.AddressCity" style="width: 300px"/></td>
+                <td>PLZ</td>
+                <td><input type="text" id="AddressZipCode" name="AddressZipCode" value="@Model.AddressZipCode" style="width: 75px"/></td>
+            </tr>
+        </table>
+
+        <input type="submit" />
+    </form>
+</body>
+
+</html>
+

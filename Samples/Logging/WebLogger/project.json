@@ -1,0 +1,22 @@
+{
+    "version": "1.0.0-*",
+    "compilationOptions": {
+        "emitEntryPoint": true
+    },
+  "tooling": {
+    "defaultNamespace": "FP.Spartakiade2016.Logging.WebLogger"
+  },
+  "dependencies": {
+    "Microsoft.AspNet.Server.Kestrel": "1.0.0-rc1-final",
+    "Microsoft.AspNet.Owin": "1.0.0-rc1-final",
+    "Nancy": "1.4.3",
+    "Contacts": "1.0.0-*",
+    "EasyNetQ": "0.55.0.425"
+  },
+  "commands": {
+    "web": "Microsoft.AspNet.Server.Kestrel --server.urls http://0.0.0.0:8080"
+  },
+    "frameworks": {
+        "dnx451": {}
+    }
+}

@@ -1,0 +1,163 @@
+{
+  "locked": false,
+  "version": 2,
+  "targets": {
+    "DNX,Version=v4.5.1": {
+      "EasyNetQ/0.55.0.425": {
+        "type": "package",
+        "dependencies": {
+          "RabbitMQ.Client": "[3.6.0, ]"
+        },
+        "compile": {
+          "lib/net45/EasyNetQ.dll": {}
+        },
+        "runtime": {
+          "lib/net45/EasyNetQ.dll": {}
+        }
+      },
+      "log4net/2.0.5": {
+        "type": "package",
+        "compile": {
+          "lib/net45-full/log4net.dll": {}
+        },
+        "runtime": {
+          "lib/net45-full/log4net.dll": {}
+        }
+      },
+      "RabbitMQ.Client/3.6.0": {
+        "type": "package",
+        "compile": {
+          "lib/net45/RabbitMQ.Client.dll": {}
+        },
+        "runtime": {
+          "lib/net45/RabbitMQ.Client.dll": {}
+        }
+      }
+    },
+    "DNX,Version=v4.5.1/win7-x86": {
+      "EasyNetQ/0.55.0.425": {
+        "type": "package",
+        "dependencies": {
+          "RabbitMQ.Client": "[3.6.0, ]"
+        },
+        "compile": {
+          "lib/net45/EasyNetQ.dll": {}
+        },
+        "runtime": {
+          "lib/net45/EasyNetQ.dll": {}
+        }
+      },
+      "log4net/2.0.5": {
+        "type": "package",
+        "compile": {
+          "lib/net45-full/log4net.dll": {}
+        },
+        "runtime": {
+          "lib/net45-full/log4net.dll": {}
+        }
+      },
+      "RabbitMQ.Client/3.6.0": {
+        "type": "package",
+        "compile": {
+          "lib/net45/RabbitMQ.Client.dll": {}
+        },
+        "runtime": {
+          "lib/net45/RabbitMQ.Client.dll": {}
+        }
+      }
+    },
+    "DNX,Version=v4.5.1/win7-x64": {
+      "EasyNetQ/0.55.0.425": {
+        "type": "package",
+        "dependencies": {
+          "RabbitMQ.Client": "[3.6.0, ]"
+        },
+        "compile": {
+          "lib/net45/EasyNetQ.dll": {}
+        },
+        "runtime": {
+          "lib/net45/EasyNetQ.dll": {}
+        }
+      },
+      "log4net/2.0.5": {
+        "type": "package",
+        "compile": {
+          "lib/net45-full/log4net.dll": {}
+        },
+        "runtime": {
+          "lib/net45-full/log4net.dll": {}
+        }
+      },
+      "RabbitMQ.Client/3.6.0": {
+        "type": "package",
+        "compile": {
+          "lib/net45/RabbitMQ.Client.dll": {}
+        },
+        "runtime": {
+          "lib/net45/RabbitMQ.Client.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "EasyNetQ/0.55.0.425": {
+      "type": "package",
+      "sha512": "Q0Iu9gUqV6kvUZLJuAXHeghs36BDmdEQLP3JeOJ+l/JNP9sH4loSbFFeWdyddIfI/1URuw5d/cXfU/VIdD56Kg==",
+      "files": [
+        "EasyNetQ.0.55.0.425.nupkg",
+        "EasyNetQ.0.55.0.425.nupkg.sha512",
+        "EasyNetQ.nuspec",
+        "lib/net45/EasyNetQ.dll",
+        "lib/net45/EasyNetQ.xml"
+      ]
+    },
+    "log4net/2.0.5": {
+      "type": "package",
+      "sha512": "AEqPZz+v+OikfnR2SqRVdQPnSaLq5y9Iz1CfRQZ9kTKPYCXHG6zYmDHb7wJotICpDLMr/JqokyjiqKAjUKp0ng==",
+      "files": [
+        "lib/net10-full/log4net.dll",
+        "lib/net10-full/log4net.xml",
+        "lib/net11-full/log4net.dll",
+        "lib/net11-full/log4net.xml",
+        "lib/net20-full/log4net.dll",
+        "lib/net20-full/log4net.xml",
+        "lib/net35-client/log4net.dll",
+        "lib/net35-client/log4net.xml",
+        "lib/net35-full/log4net.dll",
+        "lib/net35-full/log4net.xml",
+        "lib/net40-client/log4net.dll",
+        "lib/net40-client/log4net.xml",
+        "lib/net40-full/log4net.dll",
+        "lib/net40-full/log4net.xml",
+        "lib/net45-full/log4net.dll",
+        "lib/net45-full/log4net.xml",
+        "log4net.2.0.5.nupkg",
+        "log4net.2.0.5.nupkg.sha512",
+        "log4net.nuspec"
+      ]
+    },
+    "RabbitMQ.Client/3.6.0": {
+      "type": "package",
+      "sha512": "SERgu0RH68f4MkoefaiOHP8BqRfPCAIYMUSe07VT7PXTKWX+yykDAZfiV7J7pF+6rW7/XxYR1LjsCTJG8rod/g==",
+      "files": [
+        "lib/net45/RabbitMQ.Client.dll",
+        "lib/net45/RabbitMQ.Client.xml",
+        "lib/netcore45/RabbitMQ.Client.dll",
+        "lib/netcore45/RabbitMQ.Client.xml",
+        "RabbitMQ.Client.3.6.0.nupkg",
+        "RabbitMQ.Client.3.6.0.nupkg.sha512",
+        "RabbitMQ.Client.nuspec",
+        "RabbitMQ.Client.nuspec~"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    "": [
+      "EasyNetQ >= 0.55.0.425",
+      "log4net >= 2.0.5"
+    ],
+    "DNX,Version=v4.5.1": [
+      "fx/System.XML >= 4.0.0"
+    ]
+  }
+}

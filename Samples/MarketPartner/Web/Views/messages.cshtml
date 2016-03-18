@@ -1,0 +1,19 @@
+﻿@using FP.Spartakiade2016.ProcessChain.MarketPartner.Models
+@inherits Nancy.ViewEngines.Razor.NancyRazorViewBase<FP.Spartakiade2016.ProcessChain.MarketPartner.Models.MessageOverview>
+
+<html>
+<head>
+    <META HTTP-EQUIV="refresh" CONTENT="30">
+</head>
+<body>
+<h2>Nachrichten (Stand: @Model.LastUpdate) <a href="/messages">Update</a>  </h2>
+
+@foreach (Message msg in Model.Messages)
+{
+    @msg.Timestamp
+    @msg.Content
+    <hr/>
+}
+
+</body>
+</html>
