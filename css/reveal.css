@@ -112,9 +112,11 @@ html:-moz-full-screen-ancestor {
 
 .reveal .slides section .fragment.current-visible {
   opacity: 0;
+  display: none;
   visibility: hidden; }
   .reveal .slides section .fragment.current-visible.current-fragment {
     opacity: 1;
+    display: block;
     visibility: visible; }
 
 .reveal .slides section .fragment.highlight-red,
