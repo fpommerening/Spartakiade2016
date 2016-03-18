@@ -704,6 +704,20 @@ $ ./process-processes.sh
                 </section>
                 <section>
                     <h3>Docker-Compose</h3>
+                     <pre>
+                            <code data-trim contenteditable>
+                                $ docker run -it --rm --name project-compose 
+--volumes-from project-data
+ -v /var/run/docker.sock:/var/run/docker.sock 
+ fpommerening/spartakiade2016:project-compose
+                            </code>
+                        </pre>
+                        <pre>
+                            <code data-trim contenteditable>
+                                $ ./processchain.sh up
+$ ./processchain.sh rm
+                            </code>
+                        </pre>
                 </section>
              </section>
              <section>
