@@ -1,104 +1,802 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="de">
 
-	<head>
-		<meta charset="utf-8">
+<head>
+    <meta charset="utf-8">
 
-		<title>Spartakiade 2016</title>
+    <title>Spartakiade 2016</title>
 
-		<meta name="description" content="Präsentation zur Spartakiade 2016">
-		<meta name="author" content="Frank Pommerening">
+    <meta name="description" content="Microservices mit .NET und RabbitMQ (Spartakiade 2016)">
+    <meta name="author" content="Frank Pommerening">
 
-		<meta name="apple-mobile-web-app-capable" content="yes">
-		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/black.css" id="theme">
 
-		<!-- Code syntax highlighting -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
+    <!-- Code syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
 
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
 
-		<!--[if lt IE 9]>
-		<script src="lib/js/html5shiv.js"></script>
-		<![endif]-->
-	</head>
+</head>
 
-	<body>
-
-		<div class="reveal">
-
-			<!-- Any section element inside of this container is displayed as a slide -->
-			<div class="slides">
-				<section>
-					<h1>Spartakiade 2016</h1>
-                    <img src="images/logo_spartakiade.png"/>
-					
-				</section>
-				<section>
-					<h2>Frank Pommerening</h2>
-                    <div>
+<body>
+    <div class="reveal">
+        <!-- Any section element inside of this container is displayed as a slide -->
+        <div class="slides">
+            <section>
+                <h1>Microservices mit .NET und RabbitMQ</h1>
+                <h2>Spartakiade 2016</h2>
+                <img src="images/logo_spartakiade.png" style="border:0px;width:200px"/>
+            </section>
+            <section>
+                <section>
+                    <h2>Frank Pommerening</h2>
+                    <img src="images/fp.jpg" style="border:0px;width:175px">
                     <ul>
                         <li>Senior - Softwareentwickler</li>
                         <li>Consultant</li>
                         <li>Softwarearchitekt</li>
-                        
                     </ul>
-                    <br/>
-                    <br/>
+                    <br />
+                    <br />
                     <a href="mailto:frank@pommerening-online.de">frank@pommerening-online.de</a>
-                    </div>
-                    <div style="float: right">
-                        <img src="images/fp.jpg" width="25%" style="border:0px">
-                    </div>
-                    
-                    
-                    
-				</section>
-
+                </section>
+                <section data-background="images/axp.svg">
 				
+                    AXP Consulting GmbH & Co. KG in Leipzig<br/>
+                    Gründung: Mai 2012 <br />
+                    Anzahl Mitarbeiter:	8 feste <br/>
+                    Branchenfokus: Energiebranche <br/>
+					<br/>
+					<br/>
+					
+<table style="font-size:15px;margin-top:20px">
+    <tr>
+        <td>Consulting (fachlich & IT)</td>
+        <td>Software-Entwicklung</td>
+    </tr>
+    <tr>
+        <td style="vertical-align:top"><ul><li>Energiefachlich Themen (Marktkommunikation, Vertriebsprozesse, Stammdaten-Management, Zeitreihen-Management, Kapazitätsvermarktung & Kapazitäts-management, Bilanzkreismanagement, Portfolio-Management, Schnittstellen & Integrationsprojekte, Marktdaten, Regulierungsmanagement, etc.)</li>
+ 
+<li>
+ Requirements Engineering, Software-Test, Testmanagement, Inbetriebnahme, Betrieb, Wartung, Support, Geschäftsprozessmanagement, Projektarbeit / Projektmanagement, Training, Schulung & Wissenstransfer
+</li>
+<li>
+IT-Fachprozess-Analyse, -Optimierung und -Dokumentation ( auch systemübergreifend)
+</li>
+           </ul>
+</td>
+        <td>
+            <ul>
+                <li>Entwicklung von Enterprise-Applications & Business-Intelligence(BI)-Lösungen</li>
+<li>Softwareintegration, Webservices</li>
+<li>Software- und Datenmigration
+mit
+<ul>
+    <li>verschiedensten Paradigmen (SOA, REST, OOA und OOD, AOL, UML)</li>
+    <li>Verschiedensten Sprachen (aber primär C#)</li>
+    <li>Verschiedensten Datenbanken (aber primär MS SQL)</li>
+    <li>Verschiedensten Schnittstellen (z.B. SOAP, REST, XML RPC, TCP/IP, UDP)</li>
+    <li>Verschiedenste Vorgehensweisen (z.B. Wasserfall + V-Modell, Rapid Prototyping, Design Patterns, SCRUM, DDD, TDD)</li>
+    <li>Verschiedenste Technologien und Frameworks (z.B. WCF, WF, MS Enterprise Library, WinForms, ASP.NET, WPF, O/R Mapper, AutoMapper, DI-Frameworks, DevExpress-Komponenten)</li>
+</ul>
+</li></ul>            
+        </td>
+    </tr>
+</table>
 
-			</div>
+                </section>
+            </section>
+            <section>
+				<section>
+				    <h2>Einrichtung Infrastruktur</h2>
+					<img src="images/übersicht.svg" style="border:0px;width:600px">
+				</section>
+                <section>
+                
+                    Bitte die Images starten.
+                    <pre>
+                            <code data-trim contenteditable>
+                                $ docker run -d --name project-data 
+   fpommerening/spartakiade2016:project-data
+$ docker run -d --name project-share --volumes-from project-data 
+-p 445:445 fpommerening/spartakiade2016:project-share
+                            </code>
+                    </pre>
+                                
+                </section>
+            </section>
+            <section>
+                <section>
+                    <h2>RabbitMQ - ein Überblick</h2>
+                    <img src="images/logo_rabbitmq.png" style="border:0px" alt="Logo of Rabbit MQ"/>
+                </section>
+                <section>
+                    <h3>Was ist RabbitMQ?</h3>
+                    <ul>
+                        <li>Message Broker / Queue Manager
+                            <ul>
+                                <li>System um Queues zu verwalten</li>
+                                <li>Nachrichten von Systemen empfangen</li>
+                                <li>Nachrichten zwischenspeichern
+                                <li>Nachrichten nach Regeln an Systeme zustellen</li> 
+                            </ul>
+                        <li>Erstellt in <a href="https://de.wikipedia.org/w/index.php?title=Erlang_(Programmiersprache)" target="_blank"> Erlang / OTP</a></li>
+                        <li>Erlaubt Entkopplung von unterschiedlichen und unabhängigen Anwendungen</li>
+                        </ul>
+                </section>
+            </section>
+            <section>
+                <section>
+                    <h2>Nachrichtentransport</h2>
+                    <img src="images/MessageFlow.svg" alt="Übersicht Nachrichtentransport">
+                </section>
+                 <section>
+                    <h3>12 Begriffe sollt ihr sein </h3>
+                    <img src="images/confused.jpg" alt="confused"/>
+                </section>
+                 <section>
+                    <p class="fragment grow">
+                            AMQP (Advanced Message Queuing Protocol)<br/>
+                                <i>Protokoll zur Kommunikation über Systemgrenzen</i>
+                     </p>
+                     <br/>
+                     <p class="fragment grow">
+                          Produzent (Producer)</br>
+                        <i>Anwendung, die eine Nachricht erstellt</i>
+                     </p>
+                     <br/>
+                     <p class="fragment grow">
+                          Konsument (Consumer)</br>
+                        <i>Anwendung, die eine Nachricht empfängt</i>
+                     </p>
+                </section>
+                <section>
+                      <p class="fragment grow">
+                            Nachricht (Message)<br/>
+                                <i>Information, die zwischen Produzent und Konsument ausgetauscht wird</i>
+                     </p>
+                     <br/>
+                      <p class="fragment grow">
+                         Warteschlange (Queue)<br/>
+                                <i>Speichert die Nachrichten zwischen</i>
+                     </p>
+                     <br/>
+                      <p class="fragment grow">
+                            Verbindung (Connection)<br/>
+                                <i>TCP Netzwerkverbindung zwischen Anwendung und RabbitMQ broker</i>
+                     </p>
+                </section>
+                <section>
+                   <p class="fragment grow">
+                            Channel<br/>
+                                <i>Virtuelle Verbindung innerhalb der TCP-Verbindung</i>
+                     </p>
+                     </br>
+                     <p class="fragment grow">
+                         Binding<br/>
+                                <i>Verknüpfung zwischen Queue und Exchange</i>
+                     </p>
+                     </br>
+                     <p class="fragment grow">
+                         Routing key<br/>
+                                <i>"Adresse", nach welcher der Exchange entscheidet, in welche Queue er die Nachricht leitet.</i> <br/>
+                     </p>
+                </section>
+                <section>
+                    <p class="fragment grow">
+                            Benutzer (User)<br/>
+                            <ul class="fragment grow">
+                                <li>Zugangsdaten (Benutzername / Password) für RabbitMQ</li>
+                                <li>Zuordnung von Rechten (Lesen, Schreiben, Konfigurieren etc.)
+                                <li>Definition global oder für einen spezifischen virtuellen Host</li>
+                            </ul>
+                     </p>
+                     </br>
+                     <p class="fragment grow">
+                         Vhost (virtual host)</br>
+                         <i>Erlaubt, Anwendung auf einer RabbitMQ Instanz zu isolieren</i>                         
+                     </p>
+                </section>
+                <section>
+                    <h3>Exchange</h3>
+                        <ul><li>Fanout Exchange
+                            <ul>
+                                <li>Eingehende Nachrichten werden an alle verbunden Queues gesendet</li>
+                                <li>Keine Beachtung der Binding-Konfiguration</li>
+                            </ul></li>
+                            <li>Direct Exchange
+                                <ul>
+                                    <li>Producer erstellt Routing Key</li>
+                                    <li>Binding Key der Queue muss exakt passen</li>
+                                </ul>
+                            </li>
+                            <li>Topic
+                                <ul>
+                                    <li>Ähnlich dem Direct Exchange </li>
+                                    <li>Einsatz von Platzhaltern, z.B. Wort (*) / mehrere Worte (#)</li>
+                                </ul>
+                            </li>
+                            <li>Header Exchange
+                                <ul>
+                                    <li>Routing anhand von Headerinformationen der Nachricht</li>
+                                </ul>
+                            </li>
+                        <ul>
+                </section>
+            </section>
+            <section>
+                <section>
+                    <h2>RabbitMQ - Installation</h2>
+                </section>
+                <section>
+                    <h3>Installation Windows</h3>
+                    Erlang OTP <a href="https://www.erlang.org/downloads" target="_blank" alt="Download Erlang OTP">Download</a>  (Voraussetzung)<br /> 
+                    RabbitMQ <a href="http://www.rabbitmq.com/download.html" target="_blank" alt="Download RabbitMQ">Download</a> 
+                    <br />
+                    <div style="border:0px;height:500px;">
+                    <img src="images/rabbitmq_info.png" class="fragment current-visible" alt="Screenshot install RabbitMQ step 2" style="border:0px;margin-left:250px;margin-top:50px">
+                    <img src="images/erlang_1.png" class="fragment current-visible" alt="Screenshot install erlang step 1" style="border:0px">
+                    <img src="images/erlang_2.png" class="fragment current-visible" alt="Screenshot install erlang step 2" style="border:0px;margin-left:25px">
+                    <img src="images/erlang_3.png" class="fragment current-visible" alt="Screenshot install erlang step 3" style="border:0px;margin-left:50px">
+                    <img src="images/erlang_4.png" class="fragment current-visible" alt="Screenshot install erlang step 4" style="border:0px;margin-left:75px">
+                    <img src="images/erlang_5.png" class="fragment current-visible" alt="Screenshot install erlang step 5" style="border:0px;margin-left:100px">
+                    <img src="images/rabbitmq_1.png" class="fragment current-visible" alt="Screenshot install RabbitMQ step 1" style="border:0px;margin-left:125px">
+                    <img src="images/rabbitmq_2.png" class="fragment current-visible" alt="Screenshot install RabbitMQ step 2" style="border:0px;margin-left:150px">
+                    <img src="images/rabbitmq_3.png" class="fragment current-visible" alt="Screenshot install RabbitMQ step 2" style="border:0px;margin-left:175px">
+                    <img src="images/rabbitmq_4.png" class="fragment current-visible" alt="Screenshot install RabbitMQ step 2" style="border:0px;margin-left:200px">
+                    <img src="images/rabbitmq_5.png" class="fragment current-visible" alt="Screenshot install RabbitMQ step 2" style="border:0px;margin-left:225px">
+                    <img src="images/rabbitmq_6.png" class="fragment current-visible" alt="Screenshot install RabbitMQ step 2" style="border:0px;margin-left:250px">
+                    </div>
+                </section>
+               <section>
+                    <h3>Installation Linux</h3>
+                    <br />
+                    <pre>
+                            <code class="bash" data-trim contenteditable>
+                                apt-get install rabbitmq-server 
+                            </code>
+                        </pre>
+                    
+                </section>
+                <section>
+                    <h3>Management Plugin </h3>
+                    <a href="https://www.rabbitmq.com/management.html" alt="Infoseite Management PlugIn" target="_blank">Infos</a><br />
+                    <img src="images/rabbitmq_management.png" alt="Screenshot Management Oberfläche" style="border:0px;height:550px"/>
+                </section>
+                <section>
+                    <h2>Docker</h2>
+                    Standardimage auf Dockerhub
+                    <img src="images/dockerhubRabbitmq.png" style="border:0px" alt="Screenshot Dockerhub" />
+                </section>
+                <section>
+                    <h3>Starten RabbitMQ Instanz</h3>
+                        <pre>
+                            <code data-trim contenteditable>
+                                $ docker run -d --hostname my-rabbit --name firstRabbit rabbitmq:3
+                            </code>
+                        </pre>
+                    <br />
+                    Starten mit Management Plugin
+                        <pre>
+                            <code data-trim contenteditable>
+                                $ docker run -d --hostname myRabbit --name myRabbit 
+-p 5672:5672 -p 15672:15672 rabbitmq:3-management
+                            </code>
+                        </pre>
+                </section>
+            </section>
+            <section>
+                <section>
+                    <h2>EasyNetQ</h2>
+                    <img src="images/logo_easynetq.png" style="border:0px" alt="Logo EasyNetQ">
+                    <ul>
+                        <li>Einfach</li>
+                        <li>Open Source</li>
+                        <li>Modular</li>
+                    <br />
+                    </ul>
+                    </br>
+                    </br>
+                    Nuget: <a href="https://www.nuget.org/packages/EasyNetQ/" target="_blank">EasyNetQ</a></br>
+                    Github: <a href="https://github.com/EasyNetQ/EasyNetQ" target="_blank">https://github.com/EasyNetQ/EasyNetQ</a>
+                </section>
+                  <section>
+                      <h3>Warum nicht direkt</h3>
+                   Subscriber
+                     <pre><code class="cs">
+var factory = new ConnectionFactory() { HostName = "localhost" };
+using (var connection = factory.CreateConnection())
+using (var channel = connection.CreateModel())
+{
+    channel.ExchangeDeclare(exchange: "logs", type: "fanout");
+    var queueName = channel.QueueDeclare().QueueName;
+    channel.QueueBind(queue: queueName, exchange: "logs", 
+        routingKey: "");
+    var consumer = new EventingBasicConsumer(channel);
+    consumer.Received += (model, ea) =>{
+        var message = Encoding.UTF8.GetString(ea.Body);
+        DoSomething(MyMessage.Deserialize(message));    };
+    channel.BasicConsume(queue: queueName, noAck: true,
+     consumer: consumer);
+}</code></pre>
+                </section>
+                <section>
+                     Publisher
+                     <pre><code class="cs">
+var factory = new ConnectionFactory() { HostName = "localhost" };
+using (var connection = factory.CreateConnection())
+using (var channel = connection.CreateModel())
+{
+    channel.ExchangeDeclare(exchange: "logs", type: "fanout");
+    var message = new MyMessage {Content = "Hallo Welt"};
+    var body = Encoding.UTF8.GetBytes(message.Serialize());
+    channel.BasicPublish(exchange: "logs", routingKey: "",
+            basicProperties: null, body: body);
+}
+</code></pre>
+Serialisierung, Fehlerbehandlung ... <span class="fragment">fehlt alles noch</span>
+                </section>
+                <section>
+                    <h3>Vorteile</h3>
+                    <ul>
+                        <li>Messaging Pattern, z.B. Publish/Subscribe </li>
+                        <li>Routing Strategien</li>
+                        <li>Serialisierung / Deserialisierung als JSON (lesbar)</li>
+                        <li>Handling von Thread für Konsumenten</li>
+                        <li>Subscriber Reconnect</li>
+                        <li>QoS / publisher confirm</li>
+                        <li>Fehlerbehandlung</li>
+                    </ul>
+                </section>
+                 <section>
+                    <h3>API Design</h3>
+                    <img src="images/EasyNetQ.svg" alt="API EasyNETQ" style="border:0px">
+                </section>
+                
+            </section>
+            <section>
+                <section>
+                        <h2>EasyNetQ Einstieg</h2>
+                </section>
+               
+                <section>
+                    <h3>Verbindungsaufbau</h3>
+                    <pre><code class="cs">
+using System;
+using EasyNetQ;
 
-		</div>
+namepace FP.Spartakiade2016.Connecting
+{
+    public class Programm
+    {
+        public static void Main(string[] args)
+        {
+            var myBus = RabbitHutch.CreateBus("host=myRabbit");
+        }
+    }
+}
+</code>
+                    </pre>
+                </section>
+                <section>
+                    <h3>Verbindungsoptionen</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Option</th>
+                                <th>Standardwert</th>
+                                <th>Bemerkung</th>
+                        </thead>
+						<tbody>
+							<tr>
+								<td>host</td>
+                                <td>5672</td>
+                                <td>DNS-Name/IP[:Port]</td>
+							</tr>
+							<tr>
+								<td>username</td>
+                                <td>guest</td>
+                                <td></td>								
+							</tr>
+							<tr>
+								<td>passwort</td>
+								<td>guest</td>
+                                <td></td>
+							</tr>
+                            <tr>
+                                <td>prefetchcount</td>
+                                <td>50</td>
+                                <td>Anzahl der Nachrichten, die gleichzeitig abgerufen werden</td>
+                            </tr>
+                            <tr>
+                                <td>timeout</td>
+                                <td>10</td>
+                                <td>timeout in Sekunden</td>
+                            </tr>
+                            <tr>
+                                <td>publisherConfirms</td>
+                                <td>false</td>
+                                <td>Erzwingt eine Annahmebestätigung</td>
+                            </tr>
+						</tbody>
+					</table>
+                </section>
+                <section>
+                    <h3>Publish / Subscribe</h3>
+                        Sendet eine Nachricht an beliebig viele Empfänger<br/><br/>
+                        Wenn kein Empfänger definiert wurde, geht Nachricht verloren (keine Speicherung / Verarbeitung)<br /><br />
+                        Zieltypen der Bestellung müssen übereinstimmen <br /><br />
+                        Polymorphy ist möglich
+                    </ul>
+                </section>
+                <section>
+                     Subscribe
+                        <pre><code class="cs">
+ myBus.Subscribe&lt;MyClass&gt;("MySub", 
+        msg => DoSomething(msg));
+ myBus.SubscribeAsync&lt;MyClass&gt;("MySubAsync",
+        msg => DoSomethingAsync(msg));
+     </code>
+                    </pre>
+                    Publish
+                        <pre><code class="cs">
+var msg = new MyClass{};                            
+myBus.Publish(msg);
+myBus.PublishAsync(msg);
+     </code>
+                    </pre>
+                </section>
+                <section>
+                    <h3>Topic Based Routing</h3>
+                       Sonderform des Publish / Subscribe<br/><br/>
+                       Neben dem Zieltyp muss auch das Thema (Topic) passen<br/><br/>
+                       Im Thema sind Platzhalter möglich
+                    
+                </section>
+                   <section>
+                     Subscribe
+                        <pre><code class="cs">
+ myBus.Subscribe&lt;MyClass&gt;("MyTopicSub", 
+        msg => DoSomething(msg), x => x.WithTopic("MyTopic"));
+     </code>
+                    </pre>
+                    Publish
+                        <pre><code class="cs">
+var msg = new MyClass{};                            
+myBus.Publish(msg, "MyTopic");
+     </code>
+                    </pre>
+                </section>
+                <section>
+                    <h3>Request / Response (RPC)</h3>
+                    Sendet eine Nachricht und erwartet eine Antwort<br /><br />
+                    Matching über Typen der Anfrage und der Antwort<br/><br />
+                    Exception, wenn Antwort nicht innerhalb Timeout 
+                </section>
+                <section>
+                    Response
+                        <pre><code class="cs">
+                          
+myBus.Respond&lt;MyClass1,MyClass2&gt;(DoSometingWithResult);
+myBus.RespondAsync&lt;MyClass1,MyClass2&gt;(DoSometingAsyncWithResult);
+                    </code></pre>
+                    Request
+                        <pre><code class="cs">
+var req = new MyClass1{};                            
+var result = myBus.Request&lt;MyClass1,MyClass2&gt;(req);
+var result = await myBus.RequestAsync&lt;MyClass1,MyClass2&gt;(req);
+                    </code></pre>
+                </section>  
+                <section>
+                    <h3>Send / Receive (Command Pipelines)</h3>
+                    Command Pipelines<br /><br />
+                    Queue enthält Nachrichten verschiedener Typen<br /> <br />
+                    Bestellung wird auf den Nachrichtentyp eingegrenzt<br /> <br />
+                    Nicht zustellbare Nachrichten werden in Error-Queue übertragen
+                </section>
+                 <section>
+                    Receive
+                        <pre><code class="cs">
+myBus.Receive("MyMessageQueue", x => x
+    .Add&lt;MyClassA&gt;(DoSomethingWithA)
+    .Add&lt;MyClassB&gt;(DoSomethingWithA);
+                    </code></pre>
+                    Request
+                        <pre><code class="cs">
+myBus.Send("MyMessageQueue", new MyClassA {});
+myBus.Send("MyMessageQueue", new MyClassB {});
 
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.js"></script>
+                    </code></pre>
+                </section>  
+                <section>
+                    <h3>Fehlerbehandlung</h3>
+                    Queue: <b>EasyNetQ_Default_Error_Queue</b></br>
+                    Tool: EasyNetQ.Hosepipe utility (Re-Publish) 
+                </section>
+            </section>
+            
+            
+             <section>
+                 <section>
+                     <h2>Weblogger</h2>
+                     <img src="images/weblogger.svg" style="border:0px;width:700px" alt="Übersicht für Bespiel Weblogger">
+                 </section>
+                 <section>
+                     <h3>Docker-Build</h3>
+                       <pre>
+                            <code data-trim contenteditable>
+                                $ docker run -it --rm --name project-build 
+--volumes-from project-data
+ -v /var/run/docker.sock:/var/run/docker.sock 
+ fpommerening/spartakiade2016:project-build
+                            </code>
+                        </pre>
+                        <pre>
+                            <code data-trim contenteditable>
+                                $ ./logging-web.sh
+$ ./logging-caller.sh
+$ ./logging-console.sh
+                            </code>
+                        </pre>
+                </section>
+                <section>
+                    <h3>Docker-Compose</h3>
+                </section>
+             </section>
+             
+             <section>
+                 <section>
+                     <h2>Prozessketten mit Webbroker</h2>
+                     <img src="images/Prozesskette_gesamt.svg" style="border:0px;width:900px" alt="Übersicht für Bespiel Prozessketten">
+                </section>
+                <section>
+                    <h3>Webbroker / Authorization</h3>
+                    <ul>
+                        <li>NancyFx empfängt HTTP-Post auf URL http://*:80/service/</li>
+                        <li>Zugangsdaten werden per Authorization-Service geprüft</li>
+                        <ul>
+                            <li>HTTP 200 (OK)</li>
+                            <li>HTTP 401 (Unauthorized)</li>
+                            <li>HTTP 500 (JSON gegen Schema nicht valide)</li>
+                        </ul>
+                        <li>Weitergabe JSON an Message Router Service</li>
+                    </ul>
+                </section>
+                <section>
+                    <h3>Routing</h3>
+                        <ul>
+                            <li>Message Router</li>
+                            <ul>
+                                <li>Umwandlung JSON in DTO</li>
+                                <li>Weiterleitung an Section Router Services  (Customer / Invoic)
+                            </ul>
+                            <li class="fragment">Customer Router
+                                <ul>
+                                    <li>Prüfen des Nachrichtentyps</li>
+                                    <li>Weiterleitung der Registrierungen an Registration Service
+                                </ul>
+                            </li>
+                            <li class="fragment">Invoic Router
+                                <ul>
+                                    <li>Prüfen des Nachrichtentyps</li>
+                                    <li>Weiterleitung der Rechnungen an Bill Service</li>
+                                    <li>Weiterleitung der Stornierungen an Reversal Service</li>
+                                </ul>
+                            </li>
+                        </ul>
+                </section>
+                <section>
+                    <h3>Customer Services</h3>
+                    Registration Service
+                    <ul>
+                        
+                        <li>Prüfen, ob Kunde bereits vorhanden</li>
+                        <ul>
+                            <li>Ja
+                                <ul>
+                                    <li>Ablehnung an Absender per Dispatcher senden</li>
+                                </ul>
+                            </li>
+                            <li>Nein
+                                <ul>
+                                    <li>Kunden in der Datenbank erstellen </li>
+                                    <li>Bestätigung an Absender per Dispatcher senden</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </ul>
+                </section>
+                <section>
+                    <h3>INVOIC Services</h3>
+                    <table style="font-size:30px;margin-left: auto; margin-right: auto;">
+                        <thead >
+                            <th>Prüfschritt</th>
+                            <th colspan="2" style="text-align: center">Bill Service</th>
+                            <th colspan="3" style="text-align: center">Reversal Service</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Kunde ist bekannt</td>
+                                <td>Ja</td>
+                                <td>Nein</td>
+                                <td colspan="2">Ja</td>
+                                <td>Nein</td>
+                            </tr>
+                            <tr>
+                                <td>Quellrechnung vorhanden</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>Ja</td>
+                                <td>Nein</td>
+                                <td>&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>Daten speichern</td>
+                                <td>Ja</td>
+                                <td>Nein</td>
+                                <td>Ja</td>
+                                <td>Nein</td>
+                                <td>Nein</td>
+                            </tr>
+                            <tr>
+                                <td>Antwort per Dispatcher senden</td>
+                                <td>Bestätigung</td>
+                                <td>Ablehnung (Kunde unbekannt)</td>
+                                <td>Bestätigung</td>
+                                <td>Ablehnung (Quellrechnung unbekannt)</td>
+                                <td>Ablehnung (Kunde unbekannt)</td>
+                            </tr>
+                        </tbody>
+                        
+                    </table>
+                    
+                </section>
+                <section>
+                    <h3>Message Dispatcher</h3>
+                    <ul>
+                        <li>DTO in JSON umgewandelt</li>
+                        <li>Nachricht per HTTP Post an Empfänger versenden</li>
+                    </ul>
+                </section>
+                <section>
+                    <h3>Infrastuktur</h3>
+                    <pre>
+                            <code data-trim contenteditable>
+                                $ docker run --name postgresql -p 5432:5432 -d 
+fpommerening/spartakiade2016:process-data
+                                
+$docker run --name=phppgadmin 
+  --env=VIRTUAL_HOST=phppgadmin.process 
+  --link=postgresql:postgresql -p 8888:80 -d maxexcloo/phppgadmin
+ 
+                            </code>
+                        </pre>
+                </section>
+                  <section>
+                     <h3>Docker-Build</h3>
+                       <pre>
+                            <code data-trim contenteditable>
+                                $ docker run -it --rm --name project-build 
+--volumes-from project-data
+ -v /var/run/docker.sock:/var/run/docker.sock 
+ fpommerening/spartakiade2016:project-build
+                            </code>
+                        </pre>
+                        <pre>
+                            <code data-trim contenteditable>
+                                $ ./process-webbroker.sh
+$ ./process-processes.sh
+                            </code>
+                        </pre>
+                </section>
+                <section>
+                    <h3>Docker-Compose</h3>
+                </section>
+             </section>
+             <section>
+                 <section>
+                 <h2>Microservices mit RabbitMQ</h2>
+                    Die ultimative Lösung aller Probleme<span class="fragment fade-out">!</span><span class="fragment">?</span>
+                 </section>
+                 <section>
+                     <h3>Vorteile</h3>
+                     <ul>
+                         <li>Einfachere Verknüpfung / Routing</li>
+                         <li>Kompensierung von Lastspitzen</li>
+                         <li>Kompensierung von Nichtverfügbarkeit</li>
+                         <li>Skalierung ohne Architekturänderung</li>
+                    </ul>
+                 </section>
+                 <section>
+                     <h3>Nachteile</h3>
+                     <ul>
+                        <li>Erhöhte Komplexität (bei kleinem System)</li>
+                        <ul>
+                            <li>Implementierung</li>    
+                            <li>Betrieb</li>
+                        </ul>
+                        <li>RabbitMQ als SPOF</li>
+                        <li>Technologiemix schwieriger</li>
+                    </ul>
+                 </section>
+              </section>   
+             <section>
+                 <section>
+                     <h2>EasyNetQ - Erweiterung</h2>
+                 </section>
+                 <section>
+                     <h3>Logging mit Log4Net</h3>
+                 </section>
+             </section>
+            <section>
+             <section>
+                     <h2>Prozessketten mit Webbroker für Fortgeschrittene</h2>
+                </section>
+                <section>
+                    <h3>Problem - große Nachrichten</h3>
+                    Trennung von Befehlen und Daten
+                </section>
+                <section>
+                    <img src="images/Prozesskette_mongo.svg" style="border:0px;width:900px" alt="Übersicht für Beispiel Prozessketten mit MongoDB">
+                </section>
+            </section>
+			<section>
+            
+			Bildquellen:<br />
+                <p style="font-size:15pt">
+			https://commons.wikimedia.org/wiki/File%3AVisual_Studio_2013_Logo.svg<br />
+			https://www.docker.com/sites/default/files/legal/docker_media_kit_jan_2016.zip<br />
+			http://easynetq.com/design/logo_design_150.png<br />
+            https://assets.wp.nginx.com/wp-content/themes/nginx-theme/assets/img//logo.png<br />
+            https://www.rabbitmq.com/img/rabbitmq_logo_strap.png<br />
+            https://avatars1.githubusercontent.com/u/706659?v=3&s=400<br />
+            https://www.flickr.com/photos/kristiand/3223044657/<br />
+            http://www.postgresql.org/media/img/about/press/elephant.png<br />
+            </p>
+			</section>
+        </div>
+    </div>
 
-		<script>
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
 
-			// Full list of configuration options available at:
-			// https://github.com/hakimel/reveal.js#configuration
-			Reveal.initialize({
-				controls: true,
-				progress: true,
-				history: true,
-				center: true,
+    <script>
 
-				transition: 'slide', // none/fade/slide/convex/concave/zoom
+        // Full list of configuration options available at:
+        // https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            history: true,
+            center: true,
 
-				// Optional reveal.js plugins
-				dependencies: [
-					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-					{ src: 'plugin/zoom-js/zoom.js', async: true },
-					{ src: 'plugin/notes/notes.js', async: true }
-				]
-			});
+            transition: 'slide', // none/fade/slide/convex/concave/zoom
 
-		</script>
+            // Optional reveal.js plugins
+            dependencies: [
+                { src: 'lib/js/classList.js', condition: function () { return !document.body.classList; } },
+                { src: 'plugin/markdown/marked.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+                { src: 'plugin/markdown/markdown.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+                { src: 'plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } },
+                { src: 'plugin/zoom-js/zoom.js', async: true },
+                { src: 'plugin/notes/notes.js', async: true }
+            ]
+        });
 
-	</body>
+    </script>
+
+</body>
 </html>
