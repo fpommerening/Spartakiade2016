@@ -31,7 +31,6 @@ CREATE TABLE "Customer" (
 
 CREATE TABLE "Bill" (
     "Id" uuid NOT NULL,
-    "AddessId" uuid NOT NULL,
     "AddressId" uuid NOT NULL,
     "Customerid" uuid NOT NULL,
     "DocumentDate" timestamp NOT NULL,
@@ -99,4 +98,33 @@ INSERT INTO "Customer" ("Id","Birthday","DeliveryAddressId","BillingAddressId","
 
 INSERT INTO "Customer" ("Id","Birthday","DeliveryAddressId","Email","FirstName","Name","Number","Title")
 					VALUES ('3f8093e3-3f52-42c7-b6c8-9ce941597f2f','1990-07-06', 'f24c6846-1c6b-42aa-b8e6-c14f6cd4797b', 'Kevin.Lehmann@beispiel.de','Kevin','Lehmann','K-000004','Herr');
+
+
+INSERT INTO "Address" ("Id","City","Country","Number","Street","ZipCode")
+					VALUES ('c60c9898-37f1-419f-b7e2-e72f4f2ad85a','Leipzig',NULL,'34a','Hauptstraße','04347');
+
+INSERT INTO "Bill" ("Id","AddressId","Customerid","DocumentDate","Number")
+					VALUES ('7e5f4c08-f7cb-49f2-a8f4-c90fb015640d','c60c9898-37f1-419f-b7e2-e72f4f2ad85a','3f8093e3-3f52-42c7-b6c8-9ce941597f2f','2015-02-02','R-000001');
+
+INSERT INTO "Position" ("Id","Article","BillId","GrossAmmount","NetAmount","Number","TaxAmmount","ValidFrom","ValidTo")
+VALUES ('4dd270d1-444b-48c1-9c3d-99dc711182e4','Grundgebühr','7e5f4c08-f7cb-49f2-a8f4-c90fb015640d','100','119','1','19','2015-01-01','2015-01-31');
+
+
+INSERT INTO "Address" ("Id","City","Country","Number","Street","ZipCode")
+					VALUES ('bb149f4d-55a7-484d-9ef5-e983772546e6','Leipzig',NULL,'34a','Hauptstraße','04347');
+
+INSERT INTO "Bill" ("Id","AddressId","Customerid","DocumentDate","Number")
+					VALUES ('488a2d7c-ca64-4bda-9380-6f021feeb1ef','bb149f4d-55a7-484d-9ef5-e983772546e6','3f8093e3-3f52-42c7-b6c8-9ce941597f2f','2015-03-02','R-000002');
+
+INSERT INTO "Position" ("Id","Article","BillId","GrossAmmount","NetAmount","Number","TaxAmmount","ValidFrom","ValidTo")
+VALUES ('295a6751-1276-43a0-8d07-b94ca9796dcb','Grundgebühr','488a2d7c-ca64-4bda-9380-6f021feeb1ef','100','119','1','19','2015-02-01','2015-02-28');
+
+INSERT INTO "Address" ("Id","City","Country","Number","Street","ZipCode")
+					VALUES ('85825d41-c0fa-4600-83d3-06f3c9e2526c','Leipzig',NULL,'34a','Hauptstraße','04347');
+
+INSERT INTO "Bill" ("Id","AddressId","Customerid","DocumentDate","Number")
+					VALUES ('f77d85e0-e295-4d98-96fb-8a9a5a9117c8','85825d41-c0fa-4600-83d3-06f3c9e2526c','3f8093e3-3f52-42c7-b6c8-9ce941597f2f','2015-04-02','R-000003');
+
+INSERT INTO "Position" ("Id","Article","BillId","GrossAmmount","NetAmount","Number","TaxAmmount","ValidFrom","ValidTo")
+VALUES ('93a3ecac-63cb-4826-b1ba-951d16bb3700','Grundgebühr','f77d85e0-e295-4d98-96fb-8a9a5a9117c8','100','119','1','19','2015-03-01','2015-03-31');
 
