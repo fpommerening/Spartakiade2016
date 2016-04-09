@@ -52,22 +52,22 @@ namespace FP.Spartakiade2016.ProcessChain.Processes
         {
             switch (processName.ToLowerInvariant())
             {
-                //case "authorization":
-                //    return new Authorization(new MarktpartnerRepository());
-                //case "messagerouter":
-                //    return new MessageRouter();
-                //case "messagedispatcher":
-                //    return new MessageDispatcher(new MarktpartnerRepository());
-                //case "invoicrouter":
-                //    return new InvoicRouter();
-                //case "bill":
-                //    return new Bill(new CustomerRepository());
-                //case "reversal":
-                //    return new Reversal(new CustomerRepository());
-                //case "customerrouter":
-                //    return new CustomerRouter();
-                //case "registration":
-                //    return new Registration(new CustomerRepository());
+                case "authorization":
+                    return new Authorization(new MarktpartnerRepository());
+                case "messagerouter":
+                    return new MessageRouter();
+                case "messagedispatcher":
+                    return new MessageDispatcher(new MarktpartnerRepository());
+                case "invoicrouter":
+                    return new InvoicRouter();
+                case "bill":
+                    return new Bill();
+                case "reversal":
+                    return new Reversal();
+                case "customerrouter":
+                    return new CustomerRouter();
+                case "registration":
+                    return new Registration(new CustomerRepository());
                 default:
                     return null;
 
