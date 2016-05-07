@@ -49,4 +49,4 @@ Hinweis: Docker wird für die Bereitstellung der Infrastuktur, z.B. einer Datenb
 Zur Vermeidung von Wartezeiten und Entlastung der Internetleitung vor Ort sollten die Teilnehmer vorher die notwendigen Docker-Images herunterladen.
 Eine entsprechende Liste könnt ihr <a href="dockerimages.md" > hier </a> einsehen.
 
-<b>Die Präsentation könnt ihr auf der <a href="fpommerening.github.io/Spartakiade2016">GitHub-Page</a> einsehen.</b>
+<b>Die Präsentation könnt ihr auf der <a href="http://fpommerening.github.io/Spartakiade2016/index.html">GitHub-Page</a> einsehen.</b>
