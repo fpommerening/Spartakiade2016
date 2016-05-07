@@ -15,7 +15,7 @@ namespace FP.Spartakiade2016.ProcessChain.TestConsole
             var repo = new CustomerRepository();
             Processes.Customer.Registration processes = new Processes.Customer.Registration(repo);
             var req = new ProcessRequest {Message = msg};
-            processes.OnMessageRequest(req).Wait();
+            
         }
     }
 }

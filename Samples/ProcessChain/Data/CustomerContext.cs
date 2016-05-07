@@ -5,7 +5,7 @@ namespace FP.Spartakiade2016.ProcessChain.Data
 {
     internal class CustomerContext : DbContext
     {
-        private string _connectionstring = "User ID=spartakiade;Password=SportF3;Host=172.17.0.1;Port=5432;Database=spartakiade;Pooling=true";
+        private string _connectionstring = "User ID=spartakiade;Password=SportF3;Host=postgresql;Port=5432;Database=spartakiade;Pooling=true";
         public CustomerContext()
         {
             

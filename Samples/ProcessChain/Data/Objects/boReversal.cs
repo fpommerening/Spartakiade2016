@@ -2,7 +2,7 @@
 
 namespace FP.Spartakiade2016.ProcessChain.Data.Objects
 {
-    public class BoReversal
+    public class BOReversal
     {
         public Guid Id { get; set; }
 

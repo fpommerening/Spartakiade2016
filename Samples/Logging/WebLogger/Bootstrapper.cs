@@ -9,7 +9,7 @@ namespace FP.Spartakiade2016.Weblogger
     {
         protected override void ApplicationStartup(TinyIoCContainer container, IPipelines pipelines)
         {
-            
+            container.Register<LoggingRepository>().AsSingleton();
             base.ApplicationStartup(container, pipelines);
         }
     }

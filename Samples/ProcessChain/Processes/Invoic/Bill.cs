@@ -1,14 +1,24 @@
-﻿using FP.Spartakiade2016.ProcessChain.Data;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using EasyNetQ;
+using FP.Spartakiade2016.ProcessChain.Contracts;
+using FP.Spartakiade2016.ProcessChain.Contracts.Common;
 
 namespace FP.Spartakiade2016.ProcessChain.Processes.Invoic
 {
-    public class Bill
+    public class Bill : BusinessProcessBase
     {
-        private CustomerRepository _customerRepository;
-
-        public Bill(CustomerRepository customerRepository)
+        protected override IDisposable CreateSubscription(IBus bus)
         {
-            _customerRepository = customerRepository;
+            return bus.SubscribeAsync<ProcessRequest>("Bill", OnMessage, c => c.WithTopic("Bill"));
+        }
+
+        private async Task OnMessage(ProcessRequest processRequest)
+        {
+            var confirm = Confirmation.Create(processRequest.MessageId);
+            await StartProcess("MessageDispatcher", confirm, processRequest.SenderId).ConfigureAwait(false);
         }
     }
 }
